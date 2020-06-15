@@ -1,0 +1,9 @@
+{
+  "name": "geomancy",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^2.12.2"
+  }
+}

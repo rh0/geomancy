@@ -70,18 +70,15 @@
   border-left-color: transparent;
   border-right-color: transparent;
   overflow: visible;
+    height: 0%;
+    top: 135%;
+    border-top-color: transparent;
   animation-name: topShrink;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
   animation-timing-function: ease-in;
-}
-
-.lid.bottom {
-  margin-left: -50%;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
 }
 
 @keyframes topShrink {
@@ -105,6 +102,32 @@
   }
 }
 
+.lid.bottom {
+  margin-left: -50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+    border-bottom-color: #F3F2E2;
+  animation-name: bottomFade;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-out;
+}
+
+@keyframes bottomFade {
+  0% {
+    border-bottom-color: #222;
+  }
+  90% {
+    border-bottom-color: #222;
+  }
+  100% {
+    border-bottom-color: #F3F2E2;
+  }
+}
+
 .top-mask {
   position: absolute;
   bottom: 14%;
@@ -120,10 +143,16 @@
   background: #F3F2E2;
   z-index: 3;
   visibility: hidden;
+    height: 150%;
+    border-radius: 50%;
+    bottom: -2%;
+    visibility: visible;
+    border-bottom-color: #F3F2E2;
   animation-name: maskShrink;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
   animation-timing-function: ease-out;
 }
 
@@ -143,9 +172,16 @@
     border-radius: 30%;
     bottom: 13%;
   }
+  90% {
+    height: 150%;
+    border-radius: 50%;
+    border-bottom-color: #222;
+    bottom: -2%;
+  }
   100% {
     height: 150%;
     border-radius: 50%;
+    border-bottom-color: #F3F2E2;
     bottom: -2%;
   }
 }

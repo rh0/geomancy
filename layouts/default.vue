@@ -21,6 +21,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #DDD;
+  background: #313d09;
 }
 </style>

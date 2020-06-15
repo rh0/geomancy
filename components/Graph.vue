@@ -43,5 +43,7 @@ export default {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  align-content: space-between;
+  margin-bottom: -20px;
 }
 </style>

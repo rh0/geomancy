@@ -28,7 +28,7 @@
   left: 50%;
   margin: 0% 0 0 -25px;
   border-radius: 50%;
-  background: #111;
+  background: #aaa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,15 @@
   width: 40%;
   height: 40%;
   border-radius: 50%;
-  background: #DDD;
+  background: #222;
+}
+
+.iris.red {
+  background: #700d04;
+}
+
+.pupil.red {
+  background: #111;
 }
 
 .lid {
@@ -50,7 +58,7 @@
   left: 50%;
   margin: -43% 0 0 -50%;
   border-radius: 50%;
-  border: 3px solid #111;
+  border: 3px solid #222;
   overflow: hidden;
 }
 
@@ -81,10 +89,10 @@
   0% {
     height: 168%;
     top: 119%;
-    border-top-color: #111;
+    border-top-color: #222;
   }
   49% {
-    border-top-color: #111;
+    border-top-color: #222;
   }
   50% {
     height: 0%;
@@ -105,12 +113,12 @@
   height: 50%;
   width: 124%;
   margin-left: -62%;
-  border: 3px solid #111;
+  border: 3px solid #222;
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
   border-radius: 0%;
-  background: #DDD;
+  background: #F3F2E2;
   z-index: 3;
   visibility: hidden;
   animation-name: maskShrink;

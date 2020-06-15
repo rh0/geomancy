@@ -6,16 +6,16 @@
     </div>
     <div class="line">
       <eye />
-    </div>
-    <div class="line">
       <eye />
     </div>
     <div class="line">
       <eye />
-      <eye />
     </div>
     <div class="line">
       <eye />
+      <eye />
+    </div>
+    <div class="line">
       <eye />
     </div>
   </div>

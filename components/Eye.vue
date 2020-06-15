@@ -24,7 +24,6 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  top: -1%;
   left: 50%;
   margin: 0% 0 0 -25px;
   border-radius: 50%;

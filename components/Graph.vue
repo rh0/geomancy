@@ -1,7 +1,7 @@
 <template>
   <div class="graph">
     <div class="line" v-for="line in lines">
-      <eye v-for="index in (line + 1)" :key="index" />
+      <eye v-for="index in (line + 1)" :key="index" v-bind:class="eyeState" />
     </div>
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   data: function () {
     return {
       lines: [],
+      eyeState: 'open',
       timer: ''
     }
   },

@@ -73,11 +73,17 @@
     height: 0%;
     top: 135%;
     border-top-color: transparent;
+}
+
+.close .lid.top {
+  animation-direction: normal;
+}
+
+.open .lid.top {
   animation-name: topShrink;
   animation-duration: 2s;
-  animation-delay: 3s;
   animation-fill-mode: both;
-  animation-direction: alternate-reverse;
+  animation-direction: reverse;
   animation-timing-function: ease-in;
 }
 
@@ -108,11 +114,17 @@
   border-left-color: transparent;
   border-right-color: transparent;
     border-bottom-color: #F3F2E2;
+}
+
+.close .lid.bottom {
+  animation-direction: normal;
+}
+
+.open .lid.bottom {
   animation-name: bottomFade;
   animation-duration: 2s;
-  animation-delay: 3s;
   animation-fill-mode: both;
-  animation-direction: alternate-reverse;
+  animation-direction: reverse;
   animation-timing-function: ease-out;
 }
 
@@ -148,11 +160,17 @@
     bottom: -2%;
     visibility: visible;
     border-bottom-color: #F3F2E2;
+}
+
+.close .top-mask {
+  animation-direction: normal;
+}
+
+.open .top-mask {
   animation-name: maskShrink;
   animation-duration: 2s;
-  animation-delay: 3s;
   animation-fill-mode: both;
-  animation-direction: alternate-reverse;
+  animation-direction: reverse;
   animation-timing-function: ease-out;
 }
 

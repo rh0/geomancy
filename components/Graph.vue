@@ -1,19 +1,7 @@
 <template>
   <div class="graph">
-    <div class="line">
-      <eye />
-      <eye />
-    </div>
-    <div class="line">
-      <eye />
-      <eye />
-    </div>
-    <div class="line">
-      <eye />
-    </div>
-    <div class="line">
-      <eye />
-      <eye />
+    <div class="line" v-for="line in lines">
+      <eye v-for="index in (line + 1)" :key="index" />
     </div>
   </div>
 </template>
@@ -24,6 +12,11 @@ import Eye from '~/components/Eye.vue'
 export default {
   components: {
     Eye
+  },
+  data: function () {
+    return {
+      lines: [0,1,1,1]
+    }
   }
 }
 </script>

@@ -27,7 +27,7 @@
   left: 50%;
   margin: 0% 0 0 -25px;
   border-radius: 50%;
-  background: #aaa;
+  background: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;

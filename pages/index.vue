@@ -19,6 +19,7 @@ export default {
 <style>
 #geoshuffle {
   border: 2px solid #aaa;
+  width: 434px;
   background: #F3F2E2;
   border-radius: 17px;
   box-shadow: 4px 4px 2px 1px #111;

@@ -15,16 +15,18 @@ export default {
   },
   data: function () {
     return {
-      lines: [],
+      lines: [0,0,0,0],
       eyeState: 'open',
       timer: ''
     }
   },
   created () {
-    this.randomize()
+    //this.randomize()
     this.timer = setInterval(this.randomize, 9000)
   },
-  methods: {
+  methods:
+      // This is handling the new 'Step 1' feature, along with checking availabily
+{
     randomize () {
       let lineBuf = []
       for(let i=0; i<4; i++) {

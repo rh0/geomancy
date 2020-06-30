@@ -15,8 +15,25 @@ export default {
   },
   data: function () {
     return {
-      lines: [0,1,1,1]
+      lines: [1,0,1,1],
+      timer: ''
     }
+  },
+  created () {
+    this.timer = setInterval(this.randomize, 10000)
+  },
+  methods: {
+    randomize () {
+      console.log('beep')
+      let lineBuf = []
+      for(let i=0; i<4; i++) {
+        lineBuf[i] = Math.floor(Math.random() * Math.floor(2))
+      }
+      this.lines = lineBuf
+    }
+  },
+  beforeDestroy () {
+    clearInterval(this.timer)
   }
 }
 </script>

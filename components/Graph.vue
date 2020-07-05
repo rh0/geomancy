@@ -13,30 +13,13 @@ export default {
   components: {
     Eye
   },
+  props: {
+    lines: Array
+  },
   data: function () {
     return {
-      lines: [0,0,0,0],
-      eyeState: 'open',
-      timer: ''
+      eyeState: 'open'
     }
-  },
-  created () {
-    //this.randomize()
-    this.timer = setInterval(this.randomize, 9000)
-  },
-  methods:
-      // This is handling the new 'Step 1' feature, along with checking availabily
-{
-    randomize () {
-      let lineBuf = []
-      for(let i=0; i<4; i++) {
-        lineBuf[i] = Math.floor(Math.random() * Math.floor(2))
-      }
-      this.lines = lineBuf
-    }
-  },
-  beforeDestroy () {
-    clearInterval(this.timer)
   }
 }
 </script>

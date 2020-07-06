@@ -99,6 +99,7 @@ h2 {
   height: 20px;
   line-height: 20px;
   text-align: center;
+  z-index: 5;
 }
 
 .element.inner {

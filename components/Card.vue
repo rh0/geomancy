@@ -1,27 +1,92 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <h1>{{ chosenFigure.numeral }}</h1>
-      <span
-        class="element inner"
-        :class="[chosenFigure.elements.innerName]"
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
       >
-        {{ chosenFigure.elements.inner }}
-      </span>
-      <span
-        class="element outer"
-        :class="[chosenFigure.elements.outerName]"
+        <h1 v-bind:key="chosenFigure.numeral">{{ chosenFigure.numeral }}</h1>
+      </transition>
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
       >
-        {{ chosenFigure.elements.outer }}
-      </span>
+        <span
+          class="element inner"
+          v-bind:class="[chosenFigure.elements.innerName]"
+          v-bind:key="chosenFigure.numeral"
+        >
+          {{ chosenFigure.elements.inner }}
+        </span>
+      </transition>
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
+      >
+        <span
+          class="element outer"
+          v-bind:class="[chosenFigure.elements.outerName]"
+          v-bind:key="chosenFigure.numeral"
+        >
+          {{ chosenFigure.elements.outer }}
+        </span>
+      </transition>
     </div>
 
     <graph :lines="chosenFigure.lines" />
 
     <div class="card-footer">
-      <h2 class="name">{{ chosenFigure.name }}</h2>
-      <span class="sign">{{ chosenFigure.sign }}</span>
-      <span class="planet">{{ chosenFigure.planet }}</span>
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
+      >
+        <h2
+          class="name"
+          v-bind:key="chosenFigure.name"
+        >
+          {{ chosenFigure.name }}
+        </h2>
+      </transition>
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
+      >
+        <span
+          class="sign"
+          v-bind:key="chosenFigure.name"
+        >
+          {{ chosenFigure.sign }}
+        </span>
+      </transition>
+      <transition
+        appear
+        css
+        name="fade"
+        type="transition"
+        mode="out-in"
+      >
+        <span
+          class="planet"
+          v-bind:key="chosenFigure.name"
+        >
+          {{ chosenFigure.planet }}
+        </span>
+      </transition>
     </div>
   </div>
 </template>
@@ -55,6 +120,18 @@ export default {
 </script>
 
 <style>
+/* --== Transitions ==-- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* --== General Styles ==-- */
 h1, h2 {
   position: relative;
   text-align: center;

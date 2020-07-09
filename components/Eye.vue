@@ -76,6 +76,10 @@
 }
 
 .close .lid.top {
+  animation-name: topShrink;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
   animation-direction: normal;
 }
 
@@ -117,6 +121,10 @@
 }
 
 .close .lid.bottom {
+  animation-name: bottomFade;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
   animation-direction: normal;
 }
 
@@ -163,6 +171,10 @@
 }
 
 .close .top-mask {
+  animation-name: maskShrink;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
   animation-direction: normal;
 }
 

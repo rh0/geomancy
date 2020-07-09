@@ -42,7 +42,21 @@
       </transition>
     </div>
 
-    <graph :lines="chosenFigure.lines" />
+    <transition
+      appear
+      name="custom-class-transition"
+      :duration="2000"
+      enter-active-class="open"
+      enter-to-class="open"
+      leave-active-class="close"
+      mode="out-in"
+    >
+      <graph
+        v-bind:lines="chosenFigure.lines"
+        v-bind:key="chosenFigure.lines"
+      />
+    </transition>
+
 
     <div class="card-footer">
       <transition
@@ -106,7 +120,7 @@ export default {
   },
   created: function () {
     this.randomize()
-    this.timer = setInterval(this.randomize, 9000)
+    this.timer = setInterval(this.randomize, 8000)
   },
   methods: {
     randomize () {

@@ -91,6 +91,12 @@
   animation-timing-function: ease-in;
 }
 
+.stare .lid.top {
+  height: 168%;
+  top: 119%;
+  border-top-color: #222;
+}
+
 @keyframes topShrink {
   0% {
     height: 168%;
@@ -134,6 +140,10 @@
   animation-fill-mode: both;
   animation-direction: reverse;
   animation-timing-function: ease-out;
+}
+
+.stare .lid.bottom {
+  border-bottom-color: #222;
 }
 
 @keyframes bottomFade {
@@ -184,6 +194,13 @@
   animation-fill-mode: both;
   animation-direction: reverse;
   animation-timing-function: ease-out;
+}
+
+.stare .top-mask {
+  visibility: hidden;
+  height: 50%;
+  border-radius: 0%;
+  bottom: 14%;
 }
 
 @keyframes maskShrink {

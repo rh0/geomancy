@@ -47,13 +47,13 @@
       name="custom-class-transition"
       :duration="2000"
       enter-active-class="open"
-      enter-to-class="open"
       leave-active-class="close"
       mode="out-in"
     >
       <graph
         v-bind:lines="chosenFigure.lines"
-        v-bind:key="chosenFigure.lines"
+        v-bind:key="chosenFigure.numeral"
+        class="stare"
       />
     </transition>
 

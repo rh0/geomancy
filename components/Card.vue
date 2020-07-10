@@ -45,7 +45,8 @@
     <transition
       appear
       name="custom-class-transition"
-      :duration="2000"
+      :duration="1750"
+      enter-class="hidden"
       enter-active-class="open"
       leave-active-class="close"
       mode="out-in"
@@ -120,7 +121,7 @@ export default {
   },
   created: function () {
     this.randomize()
-    this.timer = setInterval(this.randomize, 8000)
+    this.timer = setInterval(this.randomize, 12000)
   },
   methods: {
     randomize () {
@@ -143,6 +144,10 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* --== General Styles ==-- */
